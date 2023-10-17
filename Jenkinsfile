@@ -17,7 +17,7 @@ pipeline {
         }
       }
       steps {
-        sh 'sonar-scanner -Dsonar.host.url=http://172.31.91.185:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=frontend -Dsonar.qualitygate.wait=true'
+        sh 'sonar-scanner -Dsonar.host.url=http://35.153.201.34:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=frontend -Dsonar.qualitygate.wait=true'
         echo 'OK'
       }
     }
