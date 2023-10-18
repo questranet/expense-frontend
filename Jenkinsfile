@@ -11,7 +11,7 @@ pipeline {
 
     stage('Release'){
       when {
-        expression { TAG_NANE ==~ ".*" }
+        expression { env.TAG_NANE ==~ ".*" }
       }
       steps {
         sh 'env'
