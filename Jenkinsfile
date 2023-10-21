@@ -42,8 +42,8 @@ pipeline {
         expression { env.TAG_NAME ==~ ".*" }
       }
       steps {
-        sh 'zip -r backend-${TAG_NAME}.zip node_modules schema DbConfig.js index.js package.json TransactionService.js'
-        sh 'curl -sSf -u "admin:Admin123" -X PUT -T backend-${TAG_NAME}.zip "http://artifactory.waleapagun.online:8081/artifactory/backend/backend-${TAG_NAME}.zip"'
+        sh 'zip -r frontend-${TAG_NAME}.zip static index.html robots.txt asset-manifest.json'
+        sh 'curl -sSf -u "admin:Admin123" -X PUT -T frontend-${TAG_NAME}.zip "http://artifactory.waleapagun.online:8081/artifactory/frontend/frontend-${TAG_NAME}.zip"'
       }
     }
 
