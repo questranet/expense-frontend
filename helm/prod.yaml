@@ -1,5 +1,5 @@
 appName: frontend
-appVersion: 2.0.5
+appVersion: 2.1.1
 replicas: 2
 service:
   type: ClusterIP
